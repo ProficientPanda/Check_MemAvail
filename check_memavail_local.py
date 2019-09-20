@@ -117,10 +117,12 @@ elif args.metric == "hybrid":
           if pswap >= args.swap:
              print("CRITICAL - UsedMemory: {0:.2f} -- UsedSwap: {1:.2f}".format( ptotal_used, pswap ) )
              exit(2)
+          else:
+            print("WARNING - UsedMemory: {0:.2f} -- UsedSwap: {1:.2f}".format( ptotal_used, pswap ) )
+            exit(1)
      elif ptotal_used >= args.warning:
-         if pswap >= args.swap:
-             print("WARNING - UsedMemory: {0:.2f} -- UsedSwap: {1:.2f}".format( ptotal_used, pswap ) )
-             exit(1)
+          print("WARNING - UsedMemory: {0:.2f} -- UsedSwap: {1:.2f}".format( ptotal_used, pswap ) )
+          exit(1)
      else:
          print("OK - UsedMemory: {0:.2f} -- UsedSwap: {1:.2f}".format( ptotal_used, pswap ) )
          exit(0)
