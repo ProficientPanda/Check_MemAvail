@@ -1,19 +1,4 @@
 #!/usr/bin/env python
-#### Changes ####
-
-# #March 24th 2019# #
-# - Changed help text for each argument to properly describe their uses
-
-# #March 21st 2019# #
-# - Added Swap total usage percentage (pswap)
-# - Added alert for hybrid (mem usage & swap usage)
-# - Added swap and hybrid options to command
-# - Added swap and hybrid alert structures
-# - Changed Primary to Metric to make more sense
-
-# #March 11th 2019# #
-# - Changed the term OverCommit in alerts to Commit
-# - Added default values to critical and warning settings to human proof
 
 #import#
 import paramiko 
@@ -22,7 +7,7 @@ import argparse
 
 
 parser = argparse.ArgumentParser(
-    description='Remote Memory check for Linux servers. Intended for ProQuest use on OpsView.', 
+    description='Remote Memory check for Linux servers. Intended for use on OpsView/Nagios monitoring systems.', 
     usage = '%(prog)s -n [--hostname] HOSTNAME -w [--warning] warning%% -c [--critical] critical%% -m [--metric] {commit,consumed,swap,hybrid} -v [--verbose] -s [--swap] swap_limit%%', 
     epilog = "Currently a work in progress, please review results before acting on alert, THIS IS NOT MEANT FOR PRODUCTION YET",
     )
