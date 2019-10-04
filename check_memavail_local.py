@@ -45,7 +45,7 @@ finally:
 if 'MemAvailable' in a:                                                                            #define what "memory available" looks like. Older OS's do not calculate this in /proc/meminfo
     memAvail   = a['MemAvailable']                                                                  # But if they do why not use it?
 else:
-    memAvail   = a['MemFree'] - low_Watermark + (a['Cached'] - min(a['Cached'] / 2, low_Watermark)) #and if they don't then we'll make our own.
+    memAvail   = a['MemFree'] - low_Watermark + (a['Cached'] - min(a['Cached'] / 2, low_Watermark)) #and if they don't then we'll make our own. https://github.com/torvalds/linux/blob/master/mm/page_alloc.c#L5089
 
 
 ### set testing metrics ###
