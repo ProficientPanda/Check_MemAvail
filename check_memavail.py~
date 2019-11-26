@@ -107,7 +107,7 @@ elif args.metric == "swap":
         print("OK - SwapUsed: {0:.2f}".format( pswap, ) )
         exit(0)
 elif args.metric == "hybrid":
-    if ptotal_used >= args.critical:
+    if ptttttotal_used >= args.critical:
         if pswap >= args.swap:
            print("CRITICAL - UsedMemory: {0:.2f} -- UsedSwap: {1:.2f}".format( ptotal_used, pswap ) )
            exit(2)
