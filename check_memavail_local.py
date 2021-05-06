@@ -7,7 +7,6 @@ import argparse
 parser = argparse.ArgumentParser(
     description='Local Memory check for Linux servers. Intended for use on OpsView/Nagios Monitoring systems.', 
     usage = '%(prog)s -n [--hostname] HOSTNAME -w [--warning] warning%% -c [--critical] critical%% -m [--metric] {commit,consumed,swap,hybrid} -v [--verbose] -s [--swap] swap_limit%%', 
-    epilog = "Currently a work in progress, please review results before acting on alert, THIS IS NOT MEANT FOR PRODUCTION YET",
     )
 
 
